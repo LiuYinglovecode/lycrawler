@@ -1,0 +1,5 @@
+rootProject.name = 'lycrawler'
+include 'craw'
+include 'spider'
+
+

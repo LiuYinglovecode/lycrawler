@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group 'org.ly'
+version '1.0-SNAPSHOT'
+
+repositories {
+    flatDir { dirs 'libs' }
+    maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(group: 'junit', name: 'junit', version: '4.12')
+    // This dependency is used by the application.
+    implementation 'com.google.guava:guava:29.0-jre'
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    implementation group: 'org.jsoup', name: 'jsoup', version: '1.13.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation 'org.jsoup:jsoup:1.13.1'
+    implementation group: 'org.json', name: 'json', version: '20090211'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-redis
+//    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '2.3.4.RELEASE'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-pool2
+    implementation group: 'org.apache.commons', name: 'commons-pool2', version: '2.0'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    // https://mvnrepository.com/artifact/org.springframework/spring-web
+    implementation group: 'org.springframework', name: 'spring-web', version: '5.2.8.RELEASE'
+    implementation group: 'redis.clients', name: 'jedis', version: '3.3.0'
+    implementation 'org.apache.httpcomponents:httpmime:4.5.13'
+}
